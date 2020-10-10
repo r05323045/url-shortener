@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const exphbs = require('express-handlebars')
+const Shortener = require('./models/shortener')
 
 const app = express()
 
@@ -20,7 +21,10 @@ app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs')
 
 app.get('/', (req, res) => {
-  res.render('index')
+  Shortener.find()
+    .lean()
+    .then(urls => res.render('index', { urls }))
+    .catch(error => console.error(error))
 })
 
 app.listen(3000, () => {
