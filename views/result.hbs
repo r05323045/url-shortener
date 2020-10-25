@@ -13,7 +13,13 @@
             <span class="input-group-text btn btn-secondary" onclick="copyUrl()"><i class="fas fa-copy"></i></span>
           </div>
         </div>
-        <input type="hidden" id="copy-to-clipboard" value="{{output_url}}">
+        <div class="w-100 my-5 text-center">
+          <a href="/">
+            <div class="btn btn-outline-primary">
+              Back
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -23,6 +29,5 @@
     const outputUrl  = document.querySelector('.output-url')
     outputUrl.select()
     document.execCommand('copy')
-    alert('Copied succesfully!')
   }
 </script>
