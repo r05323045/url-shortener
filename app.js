@@ -35,9 +35,6 @@ app.post('/', (req, res) => {
   return Shortener.find()
     .lean()
     .then(urls => {
-      urls.forEach(url => {
-        console.log(url.output_url)
-      })
       const output_url = "https://www.google.com.tw/"
       res.render('result', { output_url })
     })
