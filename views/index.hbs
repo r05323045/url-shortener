@@ -1,7 +1,23 @@
-<ul>
-  {{#each urls}}
-    <li>
-      {{this.input_url}}
-    </li>
-  {{/each}}
-</ul>
+<div class="container py-5">
+  <h1 class="text-center my-5">URL Shortener</h1>
+  <div class="row">
+    <div class="col-12 col-sm-8 col-md-6 col-xl-4 mx-auto">
+      <div class="col-6 mx-auto mb-5">
+        <img src="https://www.flaticon.com/svg/static/icons/svg/791/791757.svg">
+      </div>
+      <form method="POST" action="/">
+
+        <div class="form-group form-row">
+          <input type="url" name="url" class="form-control" placeholder="Input URL here">
+          {{#if error}}
+          <small class="mt-3 w-100 form-text text-danger text-center">{{errorMessage}}</small>
+          {{/if}}
+        </div>
+
+        <div class="text-center my-5">
+          <button class="btn btn-outline-primary" type="submit">Shorten</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
