@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
         }
       })
       Shortener.create({ input_url: inputUrl, output_url: outputUrl })
-      res.render('result', { output_url: 'http://localhost:3000/' + outputUrl })
+      res.render('result', { output_url: 'https://shorten-the-url.herokuapp.com/' + outputUrl })
     })
     .catch(error => console.log(error))
 })
