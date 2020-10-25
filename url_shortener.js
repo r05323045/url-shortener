@@ -1,9 +1,6 @@
-const Shortener = require('./models/shortener')
-
 function randomNum () {
-  const num = 65 + Math.ceil((Math.random() * 56))
-  console.log(num)
-  if (num > 90 && num < 97) {
+  const num = 48 + Math.ceil((Math.random() * 74))
+  if ((num > 90 && num < 97) || (num > 57 && num < 65)) {
     return randomNum()
   } else {
     return num
@@ -19,19 +16,8 @@ function randomWords (len) {
 }
 
 function urlShortener () {
-  Shortener.find()
-    .lean()
-    .then(urls => {
-      const result = randomWords()
-      urls.forEach(url => {
-        const output = url.output_url.slice(url.output_url.length - 5, url.output_url.length)
-        if (result === output) {
-          return urlShortener()
-        } else {
-          return 'http://localhost:3000/' + result
-        }
-      })
-    })
+  const result = randomWords(5)
+  return result
 }
 
 module.exports = urlShortener
