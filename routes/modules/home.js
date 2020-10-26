@@ -36,7 +36,6 @@ router.get('/:output_url', (req, res) => {
     .then(urls =>
       urls.forEach(url => {
         if (url.output_url === outputUrl) {
-          console.log(url.input_url)
           res.redirect(url.input_url)
         }
       })
