@@ -8,6 +8,10 @@
 1. Open the [Website](https://shorten-the-url.herokuapp.com/)
 2. Enter the URL that you want to shorten
 3. Copy the result to the clipboard for future usage
+### You can try :
+https://shorten-the-url.herokuapp.com/6y7UP (redirect to https://www.google.com.tw/)
+https://shorten-the-url.herokuapp.com/jcmB3 (redirect to https://www.facebook.com/)
+https://shorten-the-url.herokuapp.com/Ecp3Y (redirect to https://developer.mozilla.org/en-US/)
 ### Setup
 
 Clone the repo and install the dependencies.
