@@ -17,11 +17,12 @@ router.post('/', (req, res) => {
     .lean()
     .then(urls => {
       let outputUrl = urlShortener()
-      urls.forEach(url => {
-        if (outputUrl === url.output_url) {
+      for (let i = 0; i < urls.length; i++) {
+        if (outputUrl === urls[i].output_url) {
           outputUrl = urlShortener()
+          i = -1
         }
-      })
+      }
       Shortener.create({ input_url: inputUrl, output_url: outputUrl })
       res.render('result', { output_url: 'https://shorten-the-url.herokuapp.com/' + outputUrl })
     })
