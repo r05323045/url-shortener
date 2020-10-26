@@ -18,8 +18,7 @@ router.post('/', (req, res) => {
     .then(urls => {
       let outputUrl = urlShortener()
       urls.forEach(url => {
-        const output = url.output_url.slice(url.output_url.length - 5, url.output_url.length)
-        if (outputUrl === output) {
+        if (outputUrl === url.output_url) {
           outputUrl = urlShortener()
         }
       })
