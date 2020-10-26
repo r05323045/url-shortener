@@ -1,13 +1,13 @@
 
 ## URL Shortener
 <div align="center">
-  <img style="width: 200px" src="https://i.imgur.com/pKydMPp.png">
+  <img src="https://i.imgur.com/g94ri1Y.png">
 </div>
 
 ### Usage
 1. Open the [Website](https://shorten-the-url.herokuapp.com/)
 2. Enter the URL that you want to shorten
-3. Copy the result to clipboard for usage
+3. Copy the result to the clipboard for future usage
 ### Setup
 
 Clone the repo and install the dependencies.
