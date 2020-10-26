@@ -1,7 +1,7 @@
 
 ## URL Shortener
 <div align="center">
-  <img style="width: 50%" src="https://www.flaticon.com/svg/static/icons/svg/791/791757.svg">
+  <img style="width: 200px" src="https://www.flaticon.com/svg/static/icons/svg/791/791757.svg">
 </div>
 
 ### Usage
