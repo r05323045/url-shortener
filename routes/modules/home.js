@@ -33,13 +33,14 @@ router.get('/:output_url', (req, res) => {
   const outputUrl = req.params.output_url
   Shortener.find()
     .lean()
-    .then(urls =>
+    .then(urls => {
       urls.forEach(url => {
         if (url.output_url === outputUrl) {
           res.redirect(url.input_url)
         }
       })
-    )
+      res.render('notfound')
+    })
     .catch(error => console.error(error))
 })
 
